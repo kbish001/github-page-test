@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Recreational Zooming Gear</title>
+    <meta name="robots" content="noindex,nofollow" />
+	<!-- below is a google font, go to https://www.google.com/fonts to get yours! -->
+	<link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/default.css" />
+    <style type="text/css">
+	
+		.masthead{
+			font-family: 'Damion', cursive; /* required for google font */
+			font-size:3em;
+		}
+	
+		#logo{
+			float:right;
+			display:inline-block;
+			padding:2px;
+			max-width:100px; /* actual size of image */
+			width:20%; /* approximate size taken on screen in maximum view */
+		}
+	
+		#wear {
+			float:left;
+			display:inline-block;
+			padding:20px;
+			max-width:300px; /* actual size of image */
+			width:33%; /* approximate size taken on screen in maximum view */
+		}
+		footer {
+			text-align:center;
+			clear:both; /* ride below all items */
+			}
+		nav{
+			text-align:center; /* centers the nav */
+		}
+		
+		nav ul {
+				list-style:none; /* removes the bullets */
+			}
+		nav ul li
+			{
+				display:inline-block; /* makes horizontal, but able to declare margins */
+				margin:0 2%; /* margin left-right, gets smaller as necessary */
+			}
+		nav a:hover{
+			text-decoration: none;
+		}	
+    </style>
+   
+    <!--[if ltIE9]>
+       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+</head>
+<body>
+	<header role="banner">
+	    <img src="images/four-seasons.gif" alt="Seasonal Logo Goes Here" class="flexible" id="logo" />
+		<h1 class="masthead">Recreational Zooming Gear</h1>
+		<nav>
+			<ul>
+				<li class="seasons"><a href="Default">Default</a></li>
+				<li class="seasons"><a href="Spring">Spring</a></li>
+				<li class="seasons"><a href="Summer">Summer</a></li>
+				<li class="seasons"><a href="Fall">Fall</a></li>
+				<li class="seasons"><a href="Winter">Winter</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main role="main">
+		 <header><h3 id="banner">Outfitter for All Seasons!</h3></header>
+		 <p>
+		 The colors of the seasonal images are as follows:
+		 <ul>
+			<li>Spring: <b>#2B7129</b></li>
+			<li>Summer: <b>#EBA52B</b></li>
+			<li>Fall: <b>#A81124</b></li>
+			<li>Winter: <b>#005393</b></li>
+		 </ul>
+		 </p>
+		 <p>
+		 Aesthetic gentrify YOLO McSweeney's typewriter single-origin coffee. Slow-carb hella listicle lomo, Helvetica single-origin coffee butcher stumptown. Chambray try-hard church-key mumblecore, tote bag PBR cardigan. Retro Austin Brooklyn, blog Intelligentsia gentrify jean shorts sartorial bicycle rights gastropub. Aesthetic wayfarers Pitchfork, tattooed Carles quinoa meh leggings distillery pork belly banjo. Umami cred lumbersexual skateboard, pork belly Tumblr vegan letterpress. Fixie bicycle rights butcher chillwave, gluten-free health goth Echo Park locavore whatever.
+		 <img src="images/300x400.png" alt="Season Wear Goes Here" id="wear" />
+		 </p>
+		<p>
+		Gluten-free selfies normcore chillwave. Listicle 90's chambray, seitan cold-pressed try-hard Etsy authentic flexitarian vinyl. Meditation bespoke freegan, single-origin coffee cred seitan 90's gentrify brunch Williamsburg squid cold-pressed. Brooklyn readymade Tumblr wayfarers ethical. Biodiesel VHS Godard High Life, tousled Banksy craft beer. Mlkshk direct trade locavore, mumblecore keytar artisan hashtag fap. Cred cronut Brooklyn, locavore art party small batch PBR semiotics ennui kitsch taxidermy mlkshk stumptown.
+		</p>
+		<p>
+		Polaroid iPhone plaid, Pitchfork Shoreditch paleo. Hashtag keytar chia scenester Pinterest, semiotics tousled food truck. YOLO scenester deep v, taxidermy paleo quinoa McSweeney's Carles VHS mustache Williamsburg gluten-free readymade cold-pressed. Truffaut Thundercats Schlitz, listicle organic Brooklyn paleo squid asymmetrical readymade migas gluten-free Austin. Etsy Wes Anderson 8-bit retro, polaroid synth paleo banh mi before they sold out Vice. Bushwick fap Intelligentsia, whatever Etsy High Life Kickstarter migas retro Banksy YOLO Carles yr raw denim. Gluten-free fixie taxidermy pop-up, actually Kickstarter flannel put a bird on it master cleanse.
+		</p>
+		<p>
+		Text provided by <a href="http://hipsum.co/" target="_blank">Hipster Ipsum</a>
+		</p>
+     </main>
+    <footer>
+      <small>&copy; 2013, All Rights Reserved ~
+      <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
+      <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
+      </small>
+    </footer>
+    <!-- END Footer -->
+	<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$("document").ready(function(){
+		$('.seasons a').click(function(e){//find all a tags inside class of seasons
+            e.preventDefault();//stop default submission
+			var season = $(this).attr("href");//contents of href attribute of this element
+			
+            switch(season)
+           {
+                case 'Summer':
+                    $('#logo').attr('src', 'images/summer.gif');
+                    $('#wear').attr('src', 'images/summer-wear.jpg');
+                    $("html").css("background-color", "#EBA52B");
+                    $("#banner").html("Summer here and some are not!");
+                break;
+                   
+                case 'Spring':
+                   $('#logo').attr('src', 'images/spring.gif');
+                   $('#wear').attr('src', 'images/spring-wear.jpg');
+                   $("html").css("background-color", "#2B7129");
+                   $("#banner").html("Spring into the new year with new gear!");
+               break;  
+                   
+                   
+                case 'Fall':
+                    $('#logo').attr('src', 'images/fall.gif');
+                    $('#wear').attr('src', 'images/fall-wear.jpg');
+                    $("html").css("background-color", "#A81124");
+                    $("#banner").html("Fall into our autumn wear!");
+                break;
+                   
+                case 'Winter':
+                    $('#logo').attr('src', 'images/winter.gif');
+                    $('#wear').attr('src', 'images/silent-night.jpg');
+                    $("html").css("background-color", "#005393");
+                    $("#banner").html("Gear up because Winter is coming!");
+                break;    
+           }
+            //alert(season);
+		});
+	});
+    </script>
+	
+</body>
+</html>
